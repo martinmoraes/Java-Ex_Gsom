@@ -15,11 +15,11 @@ public class Principal {
 		 * https://github.com/google/gson
 		 */
 		ArrayList<Cliente> listaCliente = new ArrayList<Cliente>();
-		listaCliente.add(new Cliente("João", "XXXXXX"));
-		listaCliente.add(new Cliente("Maria", "YYYYY"));
-		listaCliente.add(new Cliente("Carlos", "FFFFFF"));
-		listaCliente.add(new Cliente("Pedro", "MMMMMMM"));
-		listaCliente.add(new Cliente("Vania", "WWWWWW"));
+		listaCliente.add(new Cliente("João", 21, new Endereco("xxxxxx", "1", "XXXXXX")));
+		listaCliente.add(new Cliente("Maria", 22, new Endereco("yyyyyy", "1", "YYYYYY")));
+		listaCliente.add(new Cliente("Carlos",23, new Endereco("uuuuu", "1", "UUUUUUU")));
+		listaCliente.add(new Cliente("Pedro", 24, new Endereco("iiiiii", "1", "IIIIIII")));
+		listaCliente.add(new Cliente("Vania", 25, new Endereco("oooooo", "1", "OOOOOOOOO")));
 		System.out.println("ArrayList: " + listaCliente.toString());
 		
 		
