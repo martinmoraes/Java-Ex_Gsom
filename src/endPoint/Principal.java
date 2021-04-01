@@ -1,9 +1,13 @@
-import java.util.List;
+package endPoint;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+
+import entity.Cliente;
+import entity.Endereco;
 
 public class Principal {
 
@@ -24,16 +28,16 @@ public class Principal {
 //		System.out.println("ArrayList: " + listaCliente.toString());
 		
 		
-		 String stringJSON = "[{\"Nome\":\"João\",\"idade\":21,\"Endereco\":{\"rua\":\"xxxxxx\",\"numero\":\"1\",\"cidade\":\"XXXXXX\"}},{\"Nome\":\"Maria\",\"idade\":22,\"Endereco\":{\"rua\":\"yyyyyy\",\"numero\":\"1\",\"cidade\":\"YYYYYY\"}},{\"Nome\":\"Carlos\",\"idade\":23,\"Endereco\":{\"rua\":\"uuuuu\",\"numero\":\"1\",\"cidade\":\"UUUUUUU\"}},{\"Nome\":\"Pedro\",\"idade\":24,\"Endereco\":{\"rua\":\"iiiiii\",\"numero\":\"1\",\"cidade\":\"IIIIIII\"}},{\"Nome\":\"Vania\",\"idade\":25,\"Endereco\":{\"rua\":\"oooooo\",\"numero\":\"1\",\"cidade\":\"OOOOOOOOO\"}}]";
+		 String arrayJSON = "[{\"Nome\":\"João\",\"idade\":21,\"Endereco\":{\"rua\":\"xxxxxx\",\"numero\":\"1\",\"cidade\":\"XXXXXX\"}},{\"Nome\":\"Maria\",\"idade\":22,\"Endereco\":{\"rua\":\"yyyyyy\",\"numero\":\"1\",\"cidade\":\"YYYYYY\"}},{\"Nome\":\"Carlos\",\"idade\":23,\"Endereco\":{\"rua\":\"uuuuu\",\"numero\":\"1\",\"cidade\":\"UUUUUUU\"}},{\"Nome\":\"Pedro\",\"idade\":24,\"Endereco\":{\"rua\":\"iiiiii\",\"numero\":\"1\",\"cidade\":\"IIIIIII\"}},{\"Nome\":\"Vania\",\"idade\":25,\"Endereco\":{\"rua\":\"oooooo\",\"numero\":\"1\",\"cidade\":\"OOOOOOOOO\"}}]";
 		
 		Principal principal = new Principal();
 		Gson gson = new GsonBuilder().create();
 
 		principal.formListToJSON(gson, listaCliente);
 				
-		principal.fromArrayJsonToArray(gson, stringJSON);
+		principal.fromArrayJsonToArray(gson, arrayJSON);
 		
-		principal.fromArrayToList(gson, stringJSON, principal);
+		principal.fromArrayToList(gson, arrayJSON, principal);
 	
 	}
 
